@@ -7,7 +7,7 @@ const { jwtSecret } = require("../auth/secret");
 
 router.post("/signin", async (req, res) => {
   let { username, password } = req.body;
-
+  console.log("hello world");
   try {
     const user = await Users.findBy({ username }).first();
     if (user && bcrypt.compareSync(password, user.password)) {
