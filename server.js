@@ -37,7 +37,7 @@ server.post('/todos', (req, res) => {
     res.status(201).json(todos);
 });
 
-server.use('/todos/:id', (req, res) => {
+server.put('/todos/:id', (req, res) => {
    
 });
 
